@@ -1,0 +1,32 @@
+.resume-container
+{
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.left-column
+{
+    text-align: left;
+    background-color: rgb(237, 88, 137);
+}
+
+.right-column
+{
+    text-align: left;
+    padding-left: 50px;
+}
+
+h1
+{
+    font-size: 50px;
+}
+h2
+{
+    font-size: 30px;
+}
+h4
+{
+    padding-bottom: none;
+}
