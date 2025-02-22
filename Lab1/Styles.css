@@ -80,7 +80,7 @@ h1{
 
 #contact{
     position: absolute;
-    top:70%;
+    top:55%;
     margin-left: 100px;
     color: white;
     padding: 10px;
@@ -99,10 +99,34 @@ h1{
 
 }
 .icon{
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     padding-right: 15px;
 }
+
+#social-media{
+    position: absolute;
+    top: 75%;
+    margin-left: 100px;
+}
+
+#social-media-list{
+    list-style: none;
+}
+
+#social-media-list > li{
+    display: inline;
+    padding: 10px;
+}
+
+ul > li > a img {
+    transition: 0.3s;
+}
+  
+ul > li >  a:hover img {
+    filter: invert(100%); 
+}
+
 
 
 
