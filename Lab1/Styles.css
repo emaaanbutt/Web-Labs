@@ -29,7 +29,7 @@
 
 #home{
     position: relative ;
-    background-color: darkslategrey;
+    background-color: #09122C;
     width: 100%;
     height: 700px;
     top: 50px;
@@ -104,6 +104,7 @@ h1{
     padding-right: 15px;
 }
 
+
 #social-media{
     position: absolute;
     top: 75%;
@@ -127,6 +128,31 @@ ul > li >  a:hover img {
     filter: invert(100%); 
 }
 
+#my-image{
+    height: 320px;
+    width: 320px;
+    background-color: none;
+    border-radius: 50%;
+    float: right;
+    margin-right: 200px;
+    margin-top:170px;
+    border: 20px solid black;
+    padding: 20px;
+}
+
+#my-image > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#social-media-list > li > a:hover,
+#social-medi-list > li > a:visited,
+#social-media-list > li > a:active{
+    color: inherit;
+    background-color: none;
+    text-decoration: none;
+}
 
 
 
