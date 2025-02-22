@@ -1,32 +1,28 @@
-.resume-container
-{
-    display: grid;
-    grid-template-columns: 0.7fr 1fr;
-    max-width: 1000px;
-    margin: auto;
+#navbar{
+    background-color: #872341;
+    position: fixed;
+    width: 100%;
+    font-size: 20px;
+    text-align: right;
+
 }
 
-.left-column
-{
-    text-align: left;
-    background-color: rgb(237, 88, 137);
+#nav{
+    list-style: none;
+    padding-right: 100px;
 }
 
-.right-column
-{
-    text-align: left;
-    padding-left: 50px;
+#nav > li{
+    display: inline;
+    padding: 15px;
 }
 
-h1
-{
-    font-size: 50px;
+#nav > li > a {
+    color: white;
+    text-decoration: none;
 }
-h2
-{
-    font-size: 30px;
+
+#nav > li > a:hover, #nav > li > a:active{
+    color: #09122C;
 }
-h4
-{
-    padding-bottom: none;
-}
+
