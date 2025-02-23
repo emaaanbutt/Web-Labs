@@ -1,7 +1,15 @@
+#main-div{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
 #navbar{
     background-color: #872341;
     position: fixed;
-    width: 100%;
+    width: 98.8%;
     font-size: 25px;
     text-align: right;
     z-index: 100;
@@ -28,11 +36,12 @@
 }
 
 #home{
-    position: relative ;
-    background-color: #09122C;
+    position: relative;
+    background-color: gray;
     width: 100%;
     height: 700px;
     top: 50px;
+    margin: 0px;
   
 }
 
@@ -146,14 +155,89 @@ ul > li >  a:hover img {
     border-radius: 50%;
 }
 
-#social-media-list > li > a:hover,
-#social-medi-list > li > a:visited,
-#social-media-list > li > a:active{
-    color: inherit;
-    background-color: none;
+.icon-item{
     text-decoration: none;
 }
 
+.icon-item:visited{
+    text-decoration: none;
+}
 
+.icon-item:active{
+    text-decoration: none;
+}
 
+#about{
+    position: absolute;
+    width: 100%;
+    height: 900px;
+    background-color: #09122C;
+
+}
+
+.image{
+    width: 500px;
+    height: 300px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+#about-me{
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    margin-left: 670px;
+    top: 60px;
+}
+
+#skills-list{
+    list-style: none;
+    margin: 0px;
+    padding:5px;
+}
+
+#about-me > h3{
+    text-align: left;
+    margin-left: 20px;
+    color: white;
+    font-size: 40px;
+}
+
+#about-me > p{
+    text-align: justify;
+    margin-left: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+#skills-list > li{
+    text-decoration: none;
+    display: inline-flex;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid #BE3144;
+    border-radius: 6px;
+    color: white;
+
+}
+
+.button{
+    margin: 20px;
+    padding-top: 7px;
+    padding-left: 13px;
+    border: 2px solid #BE3144;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #BE3144;
+
+}
+
+.button > a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    
+}
 
