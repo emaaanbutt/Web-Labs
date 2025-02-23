@@ -108,8 +108,8 @@ h1{
 
 }
 .icon{
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     padding-right: 15px;
 }
 
@@ -170,7 +170,7 @@ ul > li >  a:hover img {
 #about{
     position: absolute;
     width: 100%;
-    height: 900px;
+    height: 1000px;
     background-color: #09122C;
 
 }
@@ -187,7 +187,7 @@ ul > li >  a:hover img {
     width: 600px;
     height: 350px;
     margin-left: 670px;
-    top: 60px;
+    top: 40px;
 }
 
 #skills-list{
@@ -239,5 +239,58 @@ ul > li >  a:hover img {
     color: white;
     text-align: center;
     
+
 }
 
+#position{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+}
+
+#services > h3{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-top: 140px;
+}
+
+#services > ul{
+    list-style: none;
+
+}
+
+.service{
+    width: 350px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #E17564;
+    display: inline-flex;
+    padding: 10px;
+    margin: 15px;
+    box-shadow: 10px 10px 25px rgb(0,0,0.5);
+    
+}
+
+.service > li > h4{
+    text-align: left;
+    color: white;
+    font-size: 20px;
+}
+
+.service > li > p{
+    text-align: justify;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.service > li{
+    text-decoration: none;
+    padding: 10px;
+}
+
+.size{
+    width: 50px;
+    height:50px;
+}
