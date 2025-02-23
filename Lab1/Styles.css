@@ -327,6 +327,21 @@ ul > li >  a:hover img {
     padding: 2px;
 }
 
+.skill-percentage{
+    display: inline-flex;
+    width: 90%;
+}
+
+.percentage1{
+    text-align: right;
+    width: 90%;
+}
+
+.percentage2{
+    text-align: right;
+    width: 85%;
+}
+
 .slider{
     position: absolute;
     width: 82%;
