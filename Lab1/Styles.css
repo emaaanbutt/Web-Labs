@@ -296,19 +296,19 @@ ul > li >  a:hover img {
 }
 
 #skills{
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 1700px;
-    z-index: -1;
+    top:900px;
+    height: 800px;
     background-color: #872341;
 }
 
 #technical-skills{
-    position: absolute;
+    position: relative;
     width: 45%;
     height: 550px;
     margin: 100px;
-    top: 1000px;
+    top: 100px;
     color: white;
 }
 
@@ -396,9 +396,9 @@ ul > li >  a:hover img {
     position: absolute;
     width: 40%;
     height: 550px;
-    margin: 100px;
+    margin: 50px;
     margin-left: 52%;
-    top: 1000px;
+    top: 20px;
     color: white;
 }
 
@@ -479,16 +479,17 @@ ul > li >  a:hover img {
 #education-page{
     position: absolute;
     width: 100%;
-    height: 2550px;
+    top: 2500px;
+    height: 950px;
     background-color: #09122C;
-    z-index: -5;
+    z-index: -4;
 }
 
 #education{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 25%;
-    top: 1650px;
+    top: 10px;
     margin: 80px;
     color:white;
 }
@@ -543,7 +544,7 @@ ul > li >  a:hover img {
     position: absolute;
     width: 100%;
     height: 800px;
-    top: 3200px;
+    top: 3400px;
     background-color: #BE3144;
     z-index: -10;
 }
@@ -596,9 +597,9 @@ ul > li >  a:hover img {
 #contact-page{
     position: absolute;
     background-color: #09122C;
-    top: 4000px;
+    top: 4200px;
     width:100%;
-    height: 900px;
+    height: 1000px;
     z-index: -20;
 
 }
@@ -648,7 +649,56 @@ ul > li >  a:hover img {
     font-weight: normal;
 }
 
-#
+#send-message{
+    position: absolute;
+    margin-left: 50%;
+    top: 30%;
+}
+
+#inputs{
+    display: block;
+}
+
+.input{
+    width: 500px;
+    height: 50px;
+    border: 2px solid #872341;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    padding-left: 10px;
+    color: white;
+}
+
+#text-box{
+    height: 100%;
+}
+
+#send-message-button{
+    width: 500px;
+    background-color:#872341;
+    margin-left: 0px;
+    border: none;
+    border-radius: 30px;;
+}
+
+#send-message-button > a > p{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    margin: 0px;
+}
+
+footer{
+    text-align: center;
+    margin: 30px;
+    margin-top: 60px;
+    color: white;
+
+}
+
 
 
 
