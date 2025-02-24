@@ -542,7 +542,7 @@ ul > li >  a:hover img {
 #portfolio{
     position: absolute;
     width: 100%;
-    height: 1000px;
+    height: 800px;
     top: 3200px;
     background-color: #BE3144;
     z-index: -10;
@@ -554,7 +554,7 @@ ul > li >  a:hover img {
     position: relative;
 }
 
-#portfolio > h3{
+#portfolio > h3, #contact-page > h3{
     font-size: 70px;
     text-align: center;
     margin-top:100px;
@@ -592,6 +592,66 @@ ul > li >  a:hover img {
 .proj-link{
     height: 45%;
 }
+
+#contact-page{
+    position: absolute;
+    background-color: #09122C;
+    top: 4000px;
+    width:100%;
+    height: 900px;
+    z-index: -20;
+
+}
+
+#background{
+    margin-top: 5%;
+    background-image: url("./Images/map-color-overlay.png");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.contact-box{
+    width: 30%;
+    height: 30%;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    background-color: #872341;
+}
+
+.image-container{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid #09122C;
+    float: left;
+    margin-left: 18px;
+    margin-top:0px;
+}
+
+.image-container > img{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.contact > h4, .contact > p{
+    color: white;
+    font-size: 25px;
+    margin-left: 150px;
+}
+
+.contact > p{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#
+
+
+
 
 
 
