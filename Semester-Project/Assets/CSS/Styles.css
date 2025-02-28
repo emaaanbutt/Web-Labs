@@ -283,8 +283,114 @@
 
 #contact-page{
     position: relative;
-    height: 500px;
+    height: 400px;
     width: 100%;
     top: -110px;
     background-color: #E5989B;
+}
+
+#socials{
+    position: absolute;
+    width: 100%;
+    height: 11vh;
+    background-color: #FFB4A2;
+}
+
+#socials-container{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.size{
+    height: 45px;
+}
+
+#socials-container a:hover img{
+    border: 2px solid #B5828C;
+    border-radius: 15px;
+}
+
+#socials-container span{
+    font-size: 5vh;
+    color: white;
+    padding: 10px;
+}
+
+#help-and-about-section{
+    position: absolute;
+    top: 11vh;
+    display: flex;
+    width: 100%;
+    height: 60%;
+}
+
+#help-and-about-section > div{
+    flex-basis: 50vh;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+
+}
+
+.list h4{
+    color: gray;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 4%;
+    
+}
+
+.list a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem; 
+}
+
+.list a:hover{
+    color: gray;
+}
+
+footer{
+    position: relative;
+    height: 70px;
+    bottom: 10rem;
+    background-color: #B5828C;
+}
+
+footer > span{
+    float: left;
+    margin: 2rem;
+    color: white;;
+}
+
+#privacy-and-conditions-container{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+}
+
+#privacy-and-conditions-container li{
+    list-style: none;
+    flex-basis: 125px;
+    color: white;
+}
+
+#privacy-and-conditions-container a{
+    color: white;
+    text-decoration: none;
+
+}
+#privacy-and-conditions-container a, #privacy-and-conditions-container li{
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+#privacy-and-conditions-container a:hover, #privacy-and-conditions-container li:hover{
+    color:#FFB4A2;
 }
