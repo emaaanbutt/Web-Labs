@@ -155,7 +155,7 @@
     left: 0rem;
 }
 
-#new-in-col1{
+.col1{
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -178,17 +178,17 @@
     font-size: 1.5rem;
 }
 
-#new-in-col1 a{
+.col1 a, .col2 a{
     text-decoration: none;
     color: white;
 }
 
-#new-in-col1 a:hover, #new-in-col1 a:hover h3{
+.col1 a:hover, .col1 a:hover h3, .col2 a:hover h3, .col3 a:hover h3, .col4 a:hover h3{
     color: black;
     cursor: pointer;
 }
 
-#new-in-dropdown{
+.dropdown{
     display: none;
 }
 
@@ -196,11 +196,10 @@
     display: flex;
 }
 
-#new-in-col2{
+.col2, #clothing-col3{
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
-    flex-shrink: 0;
-    flex-grow: 0;
     flex-direction: row;
     gap: 0.7rem;
     color: white;
@@ -240,7 +239,7 @@
     color: black;
 }
 
-#new-in-col3{
+#new-in-col3, #clothing-col4{
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
@@ -251,6 +250,10 @@
     margin-right: 1%;
     padding-right: 1;
     list-style: none;
+}
+
+#clothing-col4{
+    border: none;
 }
 
 .row{
@@ -268,9 +271,8 @@
     border-color: white;
 }
 
-#new-in-col3 a{
+.col3 a{
     text-decoration: none;
-    color: black;
 }
 
 .row span{
@@ -312,7 +314,7 @@
     height: 100%;
 }
 
-.edit-container:hover{
+.edit-container:hover, .dropdown-image:hover{
     border-color: #B5828C;
 }
 
@@ -323,6 +325,61 @@
     font-size: 1.5rem;
     text-align: center;
     top: 60%;
+}
+
+.dropdown-image h3{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.col4 a{
+    text-decoration: none;
+}
+
+
+#clothing:hover #clothing-dropdown
+{
+    display: flex;
+}
+
+#clothing-dropdown{
+    left: -4.65rem;
+}
+
+#clothing-col2{
+    flex-direction: column;
+    padding-top: 3rem;
+    flex-wrap: nowrap;
+    margin-top: 0rem;
+    gap: 1.2rem;
+}
+
+#trending:hover #trending-dropdown{
+    display: flex;
+}
+
+#trending-dropdown{
+    left: -10rem;
+}
+
+#trending-col2, #trending-col3, #trending-col4{
+    width: 18rem;
+    border-right: 1px solid white;
+}
+
+.dropdown-image{
+    width: 16rem;
+    height: 20rem;
+    border: 2px solid white;
+    margin-right: 2rem;
+    margin-top: 3rem;
+}
+
+.dropdown-image img{
+    width: 100%;
+    height: 100%;
 }
 
 
