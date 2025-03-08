@@ -1,0 +1,13 @@
+@media (max-width: 1000px){
+    .carousel-display{
+        display: flex;
+    }
+
+    #categories{
+        display: none;
+    }
+
+    #view-all-button{
+        display:none;
+    }
+}

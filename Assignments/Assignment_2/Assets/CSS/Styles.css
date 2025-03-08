@@ -384,9 +384,6 @@
 
 
 
-
-
-
 #main-image{
     position: absolute;
     top: 25%;
@@ -417,26 +414,26 @@
     height: 55%;
 }
 
-#categories div{
+.cat-container{
     position: relative;
     height: 100%;
-    width: 15%;
+    width: 210px;
     background-color: white;
     display: inline-flex;
     margin-right: 2%;
 }
 
-#categories li{
+.cat-container li{
     list-style: none;
 }
 
-#categories img{
+.cat-container img{
     position: absolute;
     width: 100%;
     height: 85%;
 }
 
-#categories  p{
+.cat-container p{
     position: absolute;
     text-align: center;
     padding: 0;
@@ -478,6 +475,33 @@
 
 .button:hover span{
     color: #B5828C;
+}
+
+#view-all-button{
+    width: 10rem;
+    height: 4rem;
+    padding-right: 1rem;
+}
+
+.flex-container{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    /* justify-content: space-around; */
+}
+
+.category{
+    width: 250px;
+    height: 300px;
+}
+
+.category img{
+    width: 100%;
+    height: 85%;
+}
+
+.carousel-display{
+    display: none;
 }
 
 #last-section{
