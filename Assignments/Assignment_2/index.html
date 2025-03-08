@@ -476,9 +476,16 @@
                 
 
             <div id="main-image">
-                <a href="">
+                <a class="large" href="">
                     <img src="./Assets/Images/front-pic.png" alt="cover page">
                 </a>
+                <a class="medium" href="">
+                    <img src="./Assets/Images/front-pic-med.png" alt="cover page">
+                </a>
+                <a class="small" href="">
+                    <img src="./Assets/Images/front-pic-small.png" alt="cover page">
+                </a>
+
             </div>
         </div>
 
@@ -523,9 +530,9 @@
                 </ul>
 
                 <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-display">
-                    <div class="carousel-indicators">
-                      <button style="bottom: -20px" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button style="bottom: -20px" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <div style="bottom: -5rem;" class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active" data-bs-interval="10000">
@@ -589,34 +596,44 @@
         </div>
 
         <div id="last-section">
-            <ul id="shop-now">
-                <div class="big-post">
-                    <a href="">
-                        <li>
-                            <img class="post" src="./Assets/Images/topshop.png" alt="a girl posing">
-                            <div class="post-content">
-                                <p>Our newest womenswear brand!</p>
-                                <div class="button shop-now-button">
-                                    <span>Shop now</span>
-                                </div>
+            <div id="shop-now">
+
+                <div class="container">
+
+                    <!-- Card deck -->
+                    <div class="card-deck row">
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                      <div class="card">
+                        <div class="view overlay">
+                          <img class="card-img-top post" src="./Assets/Images/topshop.png" alt="Top shop image">
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Our newest womens brand!</p>
+                          <a href="">
+                            <div class="button shop-now-button">
+                                <span style="color:white;">Shop now</span>
                             </div>
-                        </li>
-                    </a>
-                </div>
-                <div class="big-post">
-                    <a href="">
-                        <li>
-                            <img class="post" src="./Assets/Images/hit.png" alt="a gym girl posing">
-                            <div class="post-content">
-                                <p>Work it!</p>
-                                <div class="button shop-now-button">
-                                    <span>Shop now</span>
-                                </div>
+                          </a>
+                        </div>
+                      </div>
+                      </div>             
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                      <div class="card">
+                        <div class="view overlay">
+                          <img class="card-img-top post" src="./Assets/Images/hit.png" alt="Hit image">
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Work it!</p>
+                          <a href="">
+                            <div class="button shop-now-button">
+                                <span style="color:white;">Shop now</span>
                             </div>
-                        </li>
-                    </a>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                 </div>
-            </ul>
+            </div>
         </div>
         <div id="contact-page">
             <div id="socials">
@@ -718,7 +735,7 @@
             </div>
         </div>
 
-        <footer>
+        <div id="footer">
             <span>© 2025 ASOS. All Rights Reserved.</span>
 
             <ul id="privacy-and-conditions-container">
@@ -738,8 +755,7 @@
                     <a href="">Accessibility</a>
                 </li>
             </ul>
-        </footer>
-
+        </div>
     </div>
 </body>
 </html>
