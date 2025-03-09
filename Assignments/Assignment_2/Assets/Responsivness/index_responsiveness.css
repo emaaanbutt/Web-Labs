@@ -45,9 +45,15 @@
     .card-body .shop-now-button{
         margin-left: 15% !important;
     }
+
     .card{
         margin-bottom: 4% !important;
     }
+    .container{
+        margin-right: 50px !important;
+        padding-left: 0 !important;
+    }
+
     #last-section{
         height: 290vh;
     }
@@ -56,6 +62,17 @@
         gap: 2rem;
     }
 
+    #discount-banner{
+        display: none;
+    }
+
+    #main-image{
+        top: 130px;
+    }
+
+    #top-section{
+        height: 900px;
+}
 }
 @media (max-width: 550px ){
     .large{
@@ -74,4 +91,5 @@
         padding: 0.5rem;
         height: 1000px !important;
     }
+
 }

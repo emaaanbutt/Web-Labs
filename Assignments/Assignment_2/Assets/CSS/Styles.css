@@ -1,3 +1,30 @@
+@font-face {
+    font-family: 'Futura-pt';
+    src: url('../fonts/FuturaCyrillicMedium.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'my-bold-font';
+    src: url('../fonts/FuturaCyrillicBold.ttf') format('truetype'); 
+    font-weight: bold;
+    font-style: normal;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family:'Futura-pt', sans-serif;
+}
+
+
 #top-section{
     position: relative;
     height: 1000px;
@@ -31,7 +58,7 @@
     position: absolute;
     background-color: #2d2d2d;
     width: 100%;
-    height: 10%;
+    height: 6%;
     top: 3%;
     z-index: 2;
 }
@@ -44,6 +71,7 @@
     color: white;
     font-size: 30px;
     display: flex;
+    align-items: center;
 }
 
 .menu-bar > li, .menu-bar #search-bar, .menu-bar img{
@@ -51,10 +79,9 @@
     text-decoration: none;
     padding-right: 1%;
     padding-left: 1%;
-    margin:0.2%;
-    margin-top: 2%;
-    font-size: larger;
-    font-weight: bold;
+    font-size: 14pt;
+    font-weight: bolder;
+    font-family: sans-serif;
     
 }
 
@@ -67,23 +94,18 @@
     text-decoration: none;
     color: white;
     font-size: larger;
-    font-weight: normal;
 }
 
 .menu-bar > li > a:hover{
-    color: black;
+    color: #666666;
     cursor: pointer;
 }
 
-#search-bar{
-    width: 35rem !important;
-
-}
 
 .searchbar{
     position: absolute;
     height: 35px;
-    width: 10rem !important;
+    width: 45% !important;
     border-radius: 15px;
     border: 2px solid #B5828C;
     bottom: 20%;
@@ -98,20 +120,27 @@
     align-items: center;
     height: 100%;
     gap: 0.7rem;
-    margin-left: 78%;
+    margin-left: 76%;
 }
 
 #icon-container .icon{
     position: relative;
-    width: 3.5rem;
-    height: 2rem;
+    width: 4.2rem;
+    height: 3.8rem;
+    padding: 10px;
     
 }
+
+#icon-container .icon:hover{
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
 
 
 #top-menu{
     position: relative;
-    top: 10%;
+    top: 6%;
     width: 100%;
     height: 5%;
     background-color: #666666;
@@ -191,9 +220,9 @@
     display: none;
 }
 
-#new-in:hover #new-in-dropdown{
+/* #new-in:hover #new-in-dropdown{
     display: flex;
-}
+} */
 
 .col2, #clothing-col3{
     list-style: none;
@@ -338,10 +367,10 @@
 }
 
 
-#clothing:hover #clothing-dropdown
+/* #clothing:hover #clothing-dropdown
 {
     display: flex;
-}
+} */
 
 #clothing-dropdown{
     left: -4.65rem;
@@ -355,9 +384,9 @@
     gap: 1.2rem;
 }
 
-#trending:hover #trending-dropdown{
+/* #trending:hover #trending-dropdown{
     display: flex;
-}
+} */
 
 #trending-dropdown{
     left: -10rem;
@@ -381,13 +410,62 @@
     height: 100%;
 }
 
+
+#discount-banner{
+    position: relative;
+    top: 3.7rem;
+    background-color: #000000;
+    padding-top: 1rem;
+    height: 4rem;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    
+}
+
+#discount-banner a{
+    text-decoration: none;
+}
+
+
+.banner-btn{
+    width: 7rem;
+    height: 2rem;
+    border: 2px solid white;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+}
+
+.banner-btn h2{
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+}
+
+#discount-details p{
+    color:white;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+}
+
+.banner-btn:hover h2{
+    color: #dddddd;
+}
+
+
+
 #main-image{
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 25%;
+    top: 23%;
     width: 100%;
-    left: 2%;
+    left: 1%;
 }
 
 .medium{
@@ -413,6 +491,7 @@
     color: #f5ff00;
     text-transform: uppercase;
     font-style: italic;
+    font-family: 'my-bold-font', sans-serif;
 }
 
 #categories{
@@ -423,8 +502,8 @@
 
 .cat-container{
     position: relative;
-    height: 100%;
-    width: 210px;
+    height: 105%;
+    width: 200px;
     background-color: white;
     display: inline-flex;
     margin-right: 2%;
@@ -489,7 +568,7 @@
     width: 10rem;
     height: 4rem;
     padding-right: 1rem;
-    bottom: 3rem;
+    bottom: 2rem;
 }
 
 .flex-container{
@@ -582,6 +661,7 @@
     height: 400px;
     width: 100%;
     background-color: #f2f2f2;
+    overflow: hidden;
 }
 
 #socials{
@@ -624,6 +704,7 @@
     width: 100%;
     height: 60%;
     padding: 2rem;
+    overflow: hidden;
 
 }
 
@@ -662,6 +743,7 @@
     position: relative;
     height: 85px;
     background-color: #dddddd;
+    overflow: hidden;
 }
 
 #footer > span{
