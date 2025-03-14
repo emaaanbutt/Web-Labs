@@ -97,9 +97,9 @@
                 </div>
               </div>
   
-              <div class="col-12">
+              <div class="col-12" id="address-div">
                 <label for="address" class="form-label">Address</label>
-                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                <input type="text" class="form-control" id="address" onkeydown="handleKeyDownForAddress(event,id,'#address-div')" onblur="validateAddress(id,'#address-div')" placeholder="1234 Main St" required="">
                 <div class="invalid-feedback">
                   Please enter your shipping address.
                 </div>
@@ -113,30 +113,28 @@
               <div class="col-md-5">
                 <label for="country" class="form-label">Country</label>
                 <select class="form-select" id="country" required="">
-                  <option value="">Choose...</option>
-                  <option>United States</option>
+                  <option value="">Select Country</option>
                 </select>
                 <div class="invalid-feedback">
-                  Please select a valid country.
+                  Please provide a valid country.
                 </div>
               </div>
   
               <div class="col-md-4">
                 <label for="state" class="form-label">State</label>
                 <select class="form-select" id="state" required="">
-                  <option value="">Choose...</option>
-                  <option>California</option>
+                  <option value="">Select State</option>
                 </select>
                 <div class="invalid-feedback">
                   Please provide a valid state.
                 </div>
               </div>
   
-              <div class="col-md-3">
+              <div class="col-md-3" id="zip-div">
                 <label for="zip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="zip" placeholder="" required="">
+                <input type="text" class="form-control" id="zip" onsubmit="validateZip(id,'#zip-div')" onkeydown="handleKeyDownForZip(event,id,'#zip-div')" onblur="validateZip(id,'#zip-div')" placeholder="12345" required="">
                 <div class="invalid-feedback">
-                  Zip code required.
+                  Please provide a valid Zip code.
                 </div>
               </div>
             </div>
