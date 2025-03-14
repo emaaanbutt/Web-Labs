@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Futura-pt';
+    src: url('../fonts/FuturaCyrillicMedium.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body {
+
+    margin: 0;
+    padding: 5%;
+    width: 100%;
+    font-family:'Futura-pt', sans-serif;
+    color: #2d2d2d;
+    background-color: #f2f2f2 !important;
+}
+
+.display{
+    display: block !important;
+}
+    
+
+.success{
+    border: 2px solid green !important;
+}
+
