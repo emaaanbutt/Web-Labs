@@ -74,6 +74,25 @@ function validateAddress(idName,divIdName) {
     }
 }
 
+function handleKeyDownForCountryAndState(event, idName,divIdName) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        validateCountry(idName, divIdName);
+    }
+}
+
+function validateCountryAndState(idName,divIdName) {
+    let countryOrStateToBeValidated = document.getElementById(idName).value;
+    if (!isValidCountryOrState(countryOrStateToBeValidated)) {
+        document.querySelector(divIdName+" .invalid-feedback").classList.add("display");
+        document.getElementById(idName).classList.remove("success");
+    } else {
+        document.querySelector(divIdName+" .invalid-feedback").classList.remove("display");
+        document.getElementById(idName).classList.add("success");
+    }
+}
+
+
 function handleKeyDownForZip(event, idName,divIdName) {
     if (event.key === "Enter") {
         event.preventDefault();
@@ -90,6 +109,20 @@ function validateZip(idName,divIdName) {
         document.querySelector(divIdName+" .invalid-feedback").classList.remove("display");
         document.getElementById(idName).classList.add("success");
     }
+}
+
+function handleKeyDownForCcNumber(event, idName,divIdName) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        validateCcNumber(idName, divIdName);
+    }
+}
+
+function validateCcNumber(idName,divIdName) {
+    let ccNumberToBeValidated = document.getElementById(idName).value;
+    if (!isValidCcNumber(ccNumberToBeValidated)) {
+        document.querySelector(divIdName+" .invalid-feedback").classList.add("display");
+    } 
 }
 
 document.getElementById("firstName").addEventListener("input", function () {
@@ -117,9 +150,28 @@ document.getElementById("address").addEventListener("input", function () {
     this.classList.remove("success");
 });
 
+document.getElementById("country").addEventListener("input", function () {
+    document.querySelector("#country-div .invalid-feedback").classList.remove("display");
+    this.classList.remove("success");
+});
+
+document.getElementById("state").addEventListener("input", function () {
+    document.querySelector("#state-div .invalid-feedback").classList.remove("display");
+    this.classList.remove("success");
+});
+
 document.getElementById("zip").addEventListener("input", function () {
     document.querySelector("#zip-div .invalid-feedback").classList.remove("display");
     this.classList.remove("success");
+});
+
+document.getElementById("cc-name").addEventListener("input", function () {
+    document.querySelector("#cc-name-div .invalid-feedback").classList.remove("display");
+    this.classList.remove("success");
+});
+
+document.getElementById("cc-number-div").addEventListener("input", function () {
+    document.querySelector("#cc-number-div .invalid-feedback").classList.remove("display");
 });
 
 
@@ -144,8 +196,17 @@ function isValidAddress(address){
     return address.trim() !== ""
 }
 
+function isValidCountryOrState(countryOrState){
+    return countryOrState.trim() !== "";
+}
+
 function isValidZip(zip){
     return zip.length === 5;
+}
+
+function isValidCcNumber(cc_number){
+    let pattern = /[0-9]/
+    return cc_number.trim() !== "" && pattern.test(cc_number);
 }
 
 async function loadCountries() {

@@ -110,9 +110,9 @@
                 <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
               </div>
   
-              <div class="col-md-5">
+              <div class="col-md-5" id="country-div">
                 <label for="country" class="form-label">Country</label>
-                <select class="form-select" id="country" required="">
+                <select class="form-select" id="country" onkeydown="handleKeyDownForCountryAndState(event,id,'#country-div')" onblur="validateCountryAndState(id,'#country-div')" required="">
                   <option value="">Select Country</option>
                 </select>
                 <div class="invalid-feedback">
@@ -120,9 +120,9 @@
                 </div>
               </div>
   
-              <div class="col-md-4">
+              <div class="col-md-4" id="state-div">
                 <label for="state" class="form-label">State</label>
-                <select class="form-select" id="state" required="">
+                <select class="form-select" id="state" onkeydown="handleKeyDownForCountryAndState(event,id,'#state-div')" onblur="validateCountryAndState(id,'#state-div')" required="">
                   <option value="">Select State</option>
                 </select>
                 <div class="invalid-feedback">
@@ -171,18 +171,18 @@
             </div>
   
             <div class="row gy-3">
-              <div class="col-md-6">
+              <div class="col-md-6" id="cc-name-div">
                 <label for="cc-name" class="form-label">Name on card</label>
-                <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                <input type="text" class="form-control" id="cc-name" onkeydown="handleKeyDownForName(event,id,'#cc-name-div')" onblur="validateName(id,'#cc-name-div')" placeholder="John Doe" required="">
                 <small class="text-body-secondary">Full name as displayed on card</small>
                 <div class="invalid-feedback">
                   Name on card is required
                 </div>
               </div>
   
-              <div class="col-md-6">
+              <div class="col-md-6" id="cc-number-div">
                 <label for="cc-number" class="form-label">Credit card number</label>
-                <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                <input type="text" class="form-control" id="cc-number" onkeydown="handleKeyDownForCcNumber(event,id,'#cc-number-div')" onblur="validateCcNumber(id,'#cc-number-div')" placeholder="" required="">
                 <div class="invalid-feedback">
                   Credit card number is required
                 </div>
