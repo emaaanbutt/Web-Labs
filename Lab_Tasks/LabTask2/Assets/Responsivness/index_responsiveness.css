@@ -1,0 +1,164 @@
+@media (max-width: 1200px)
+{
+    .card-body .shop-now-button{
+        margin-left: 15% !important;
+    }
+
+}
+
+@media (max-width: 1100px)
+{
+    #men , #women{
+        display: none;
+    }
+
+    .searchbar{
+        left: 25%;
+        width: 70%;
+        min-width: 400px;
+    }
+
+    #icon-container{
+        margin-left: 70%;
+    }
+
+    #icon-container .icon{
+        padding: 15px;
+        width: 4rem;
+    }
+
+    #shop{
+        margin-left: 0%;
+        height: 70px;
+        width: 120px;
+    }
+    
+}
+
+@media (max-width: 992px){
+    .carousel-display{
+        display: flex;
+    }
+
+    #categories{
+        display: none;
+    }
+
+    #view-all-button{
+        display:none;
+    }
+
+    .large{
+        display: none;
+    }
+
+    .medium{
+        display: flex;
+    }
+
+    .card-body .shop-now-button{
+        margin-left: 3% !important;
+    }
+
+    #last-section{
+        height: 100vh;
+    }
+
+    .shop-now-button{
+        height: 12%;
+    }
+
+}
+
+@media(max-width: 850px){
+
+    #icon-container{
+        margin-left: 55%;
+    }
+
+    #search-bar{
+        display: none !important;
+    }
+
+    #hidden{
+        display: flex;
+    }
+
+    #top-menu{
+        display: none;
+    }
+    
+    #collapsed-side-menu{
+        display: flex;
+        margin-left: -20px !important;
+    }
+
+}
+
+
+@media (max-width: 767px)
+{
+    .card-body .shop-now-button{
+        margin-left: 15% !important;
+    }
+
+    .card{
+        margin-bottom: 4% !important;
+    }
+    .container{
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    #last-section{
+        height: 290vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    #socials-container{
+        gap: 2rem;
+    }
+
+    #discount-banner{
+        display: none;
+    }
+
+    #main-image{
+        top: 130px;
+    }
+
+    #top-section{
+        height: 900px;
+    }
+
+    #icon-container{
+        margin-left: 45%;
+    }
+
+
+}
+@media (max-width: 550px ){
+    .large{
+        display: none;
+    }
+
+    .medium{
+        display: none;
+    }
+
+    .small{
+        display: flex;
+    }
+
+    #help-and-about-section{
+        padding: 0.5rem;
+        height: 1000px !important;
+    }
+
+    #icon-container{
+        margin-left: 35%;
+    }
+
+
+}
