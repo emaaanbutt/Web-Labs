@@ -1,5 +1,5 @@
 body{
-    background-color: powderblue;
+    background-color: lightcoral;
 }
 
 #container{
@@ -13,6 +13,10 @@ input, textarea{
     font-size: 1.3rem;
 }
 
+textarea{
+    height: 5rem;
+}
+
 button{
     width: 100px;
     height: 40px;
@@ -22,19 +26,27 @@ button{
     border-radius: 10px;
 }
 
+.display{
+    display: inline-block;
+}
+
+.hidden{
+    display: none;
+}
+
 #products{
     display: flex;
     flex-direction: column;
 }
 
 #products > div{
-    width: 60%;
+    width: 40%;
     height: auto;
     border: 2px solid black;
     margin-top: 2rem;
     padding: 1rem;
     text-align: center;
-    background-color: lightcoral;
+    background-color: rgb(236, 229, 166);
 }
 
 #products h3{
@@ -49,6 +61,11 @@ button{
     font-size: 1.3rem;
 }
 
+#products img{
+    width: 70%;
+    height: 300px;
+}
+
 .edit{
     background-color: plum;
     margin-right: 2rem;
@@ -61,4 +78,11 @@ button{
 
 button:hover{
     cursor: pointer;
+}
+
+@media (max-width: 800px)
+{
+    #products > div{
+        width: 70%;
+    }
 }
