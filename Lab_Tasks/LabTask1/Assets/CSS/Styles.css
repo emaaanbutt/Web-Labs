@@ -491,6 +491,7 @@ body {
     top: 23%;
     width: 100%;
     left: 1%;
+    overflow: hidden;
 }
 
 .medium{
@@ -648,6 +649,8 @@ body {
     margin: 5%;
     height: 100%;
     border: none !important;
+    display: flex;
+
   }
 
 .card-text{

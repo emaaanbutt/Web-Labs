@@ -239,7 +239,7 @@ function isValidUsername(username) {
 
 function isValidEmail(email) {
     let pattern = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com|icloud\.com|protonmail\.com)$/;
-    return pattern.test(email);
+    return pattern.test(email) || email.trim() === "";
 }
 
 function isValidAddress(address){
