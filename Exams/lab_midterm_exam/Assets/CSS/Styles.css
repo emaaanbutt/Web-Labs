@@ -126,11 +126,11 @@ body {
 #tasks-list {
     width: 50%;
     margin-left: 25%;
-    height: 500px;
+    height: 600px;
     background-color: #111111;
     z-index: 10;
     position: absolute;
-    top: 20%;
+    top: 15%;
     list-style: none;
     padding: 0;
     box-shadow: 5px 5px 10px 15px rgba(0, 0, 0, 0.3);
@@ -152,21 +152,36 @@ body {
     width: 100%;
     border: 2px solid black;
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 #tasks-list h2{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     padding-left: 5%;
     color: #f5ff00;
 }
 
-#tasks-list span{
-    font-size: 1.2rem;
+#tasks-list p{
+    font-size: 1rem;
     padding-left: 5%;
+    padding-right: 5%;
+}
+
+#tasks-list a{
+    align-self: center;
+    text-decoration: none;
+    width: 70px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    color: #000000;
 }
 
 #tasks-list a:hover{
-    color: #f5ff00;
+    color: #2d2d2d;
+    background-color: #f5ff00;
 }
 
 #women:active{
