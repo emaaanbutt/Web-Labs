@@ -109,18 +109,21 @@ body {
     background-color: #666666;
 }
 
+
 #previous-tasks h5{
-    font-size: 1.5rem;
-    font-family: 'my-bold-font', sans-serif;
     padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.8rem;
+    font-size: 17pt;
+    font-weight: bolder;
+    font-family: sans-serif;
 }
 
 #previous-tasks:hover{
     background-color: #666666;
+    cursor: pointer;
 }
 
-#tasks-list{
+#tasks-list {
     width: 50%;
     margin-left: 25%;
     height: 500px;
@@ -128,10 +131,21 @@ body {
     z-index: 10;
     position: absolute;
     top: 20%;
-    display: none;
     list-style: none;
     padding: 0;
-}
+    box-shadow: 5px 5px 10px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+
+#tasks-list.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
 #tasks-list li{
     height: 25%;
@@ -141,7 +155,7 @@ body {
 }
 
 #tasks-list h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding-left: 5%;
     color: #f5ff00;
 }
@@ -151,6 +165,9 @@ body {
     padding-left: 5%;
 }
 
+#tasks-list a:hover{
+    color: #f5ff00;
+}
 
 #women:active{
     background-color: #666666;
