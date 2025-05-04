@@ -1,0 +1,172 @@
+<%- include('partials/header.ejs') %>
+
+            <div id="discount-banner">
+                <div class="banner-btn">
+                    <a href=""><h2>WOMEN</h2></a>
+                </div>
+                <div id="discount-details">
+                    <p>UP TO 70% OFF 1000S OF STYLES <br> Plus, an extra 15% off* <br> With code: SUNSET</p>
+                </div>
+                <div class="banner-btn">
+                    <a href=""><h2>MEN</h2></a>
+                </div>
+            </div>
+                
+
+            <div id="main-image">
+                <a class="large" href="">
+                    <img src="/Images/front-pic.png" alt="cover page">
+                </a>
+                <a class="medium" href="">
+                    <img src="/Images/front-pic-med.png" alt="cover page">
+                </a>
+                <a class="small" href="">
+                    <img src="/Images/front-pic-small.png" alt="cover page">
+                </a>
+
+            </div>
+        </div>
+
+        <div id="mid-section">
+            <div id="heading">
+                <h1>Shop by category</h1>
+            </div>
+            <div>
+                <ul id="categories">
+                    <div id="dresses" class="cat-container">
+                        <a href="">
+                            <li>
+                                <img src="/Images/dress.png" alt="a girl wearing a dress">
+                            </li>
+                            <p>Dresses</p>
+                        </a>
+                    </div>
+                    <div id="tops" class="cat-container">
+                        <a href="">
+                            <li>
+                                <img src="/Images/top.png" alt="a girl wearing a top">
+                            </li>
+                            <p style="margin-left: 37%;">Tops</p>
+                        </a>
+                    </div>
+                    <div id="bottoms" class="cat-container">
+                        <a href="">
+                            <li>
+                                <img src="/Images/bottom.png" alt="a girl wearing pants">
+                            </li>
+                            <p>Bottoms</p>
+                        </a>
+                    </div>
+                    <div id="coats-and-jackets" class="cat-container">
+                        <a href="">
+                            <li>
+                                <img src="/Images/coat.png" alt="a girl wearing a coat">
+                            </li>
+                            <p style="margin-left: 10%;">Coats and Jackets</p>
+                        </a>
+                    </div>
+                </ul>
+
+
+                 <div id="carouselExample" class="carousel carousel slide carousel-display" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="flex-container">
+                            <div class="cat-container category">
+                                <a href="">
+                                    <li>
+                                        <img src="/Images/dress.png" alt="a girl wearing a dress">
+                                    </li>
+                                    <p>Dresses</p>
+                                </a>
+                            </div>
+                            <div id="tops" class="cat-container category">
+                                <a href="">
+                                    <li>
+                                        <img src="/Images/top.png" alt="a girl wearing a top">
+                                    </li>
+                                    <p style="margin-left: 37%;">Tops</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <div class="flex-container">
+                            <div class="cat-container category">
+                                <a href="">
+                                    <li>
+                                        <img src="/Images/bottom.png" alt="a girl wearing a bottom">
+                                    </li>
+                                    <p>Bottoms</p>
+                                </a>
+                            </div>
+                            <div id="tops" class="cat-container category">
+                                <a href="">
+                                    <li>
+                                        <img src="/Images/coat.png" alt="a girl wearing a coat">
+                                    </li>
+                                    <p style="margin-left: 20%;">Coats & Jackets</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div> 
+            <div id="view-all-button" class="button">
+                <a href="">
+                    <div>
+                        <span>View All</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div id="last-section">
+            <div id="shop-now">
+                <div class="container">
+                    <div class="card-deck row">
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                      <div class="card">
+                        <div class="view overlay">
+                          <img class="card-img-top post" src="/Images/topshop.png" alt="Top shop image">
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Our newest womens brand!</p>
+                          <a href="">
+                            <div class="button shop-now-button">
+                                <span style="color:black;">Shop now</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      </div>             
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                      <div class="card">
+                        <div class="view overlay">
+                          <img class="card-img-top post" src="/Images/hit.png" alt="Hit image">
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Work it!</p>
+                          <a href="">
+                            <div class="button shop-now-button">
+                                <span style="color:black;">Shop now</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+<%- include('partials/footer.ejs') %>
