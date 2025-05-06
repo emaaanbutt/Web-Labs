@@ -27,3 +27,8 @@ body {
     border: 2px solid green !important;
 }
 
+#checkout-page{
+    top: 5rem;
+    position: relative;
+}
+
