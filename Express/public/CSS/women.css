@@ -1,0 +1,21 @@
+.cover-img{
+    height: 80vh;
+    width: 100%;
+}
+
+.c-img{
+    height: 100%;
+    width: 100%;
+}
+
+.collections a{
+    margin: 0;
+    height: 90vh;
+    width: 100%;
+
+}
+
+.collection{
+    margin-top: 5rem;
+}
+
