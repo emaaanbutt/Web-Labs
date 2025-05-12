@@ -19,3 +19,23 @@
     margin-top: 5rem;
 }
 
+.heading{
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-div{
+    display: flex;
+    height: 45vh;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.small-cont a img{
+    height: 100%;
+    border: 1px solid white;
+}

@@ -14,4 +14,19 @@
     </a>
 </div>
 
+<div class="heading">
+    <h2>New in</h2>
+</div>
+
+<div class="container-div">
+    <% const images = ['/Images/w1.png', '/Images/w2.png', '/Images/w3.png', '/Images/w4.png', '/Images/w5.png', '/Images/w6.png',];
+    images.forEach(image => { %>
+        <div class="small-cont">
+            <a href="">
+                <img src="<%= image %>" alt="">
+            </a>
+        </div>
+    <% }); %>
+</div>
+
 <%- include('partials/footer.ejs') %>
