@@ -18,6 +18,11 @@ app.get("/women", (req,res)=>{
     res.render("women");
 });
 
+app.get("/men", (req,res)=>{
+    res.render("men");
+});
+
+
 
 app.listen(port, ()=>{
     console.log(`Server listening at port ${port}.`);

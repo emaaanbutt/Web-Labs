@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+
+<div class="cover-img" id="men-cover">
+    <a href="">
+        <img class="c-img" src="/Images/cover-men.png" alt="cover photo">
+    </a>
+</div>
+
+
+<div class="heading">
+    <h2>New in</h2>
+</div>
+
+<div class="container-div">
+    <% const images = ['/Images/m1.png', '/Images/m2.png', '/Images/m3.png', '/Images/m4.png', '/Images/m5.png', '/Images/m6.png',];
+    images.forEach(image => { %>
+        <div class="small-cont">
+            <a href="">
+                <img src="<%= image %>" alt="">
+            </a>
+        </div>
+    <% }); %>
+</div>
+
+<%- include('partials/footer.ejs') %>
