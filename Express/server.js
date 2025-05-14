@@ -22,7 +22,9 @@ app.get("/men", (req,res)=>{
     res.render("men");
 });
 
-
+app.get("/cv", (req,res)=> {
+    res.render("cv", {layout: false});
+});
 
 app.listen(port, ()=>{
     console.log(`Server listening at port ${port}.`);
