@@ -1,9 +1,11 @@
 import express from "express";
+import expressLayouts from 'express-ejs-layouts';
 
 const port = 4000;
 const app = express();
 
 app.use(express.static("public"));
+app.use(expressLayouts);
 app.set("view engine", "ejs");
 
 app.get("/", (req,res)=>{
