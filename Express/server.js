@@ -13,7 +13,7 @@ app.get("/", (req,res)=>{
 });
 
 app.get("/checkout", (req,res) => {
-    res.render("checkout");
+    res.render("checkout",  {layout: false});
 });
 
 app.get("/women", (req,res)=>{
@@ -22,6 +22,10 @@ app.get("/women", (req,res)=>{
 
 app.get("/men", (req,res)=>{
     res.render("men");
+});
+
+app.get("/login", (req, res)=>{
+    res.render("login");
 });
 
 app.get("/cv", (req,res)=> {
