@@ -6,5 +6,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+
+#btns{
+    display: flex;
+}
+
+.butn{
+    width: 5rem;
+    height: 2rem;
+    background-color: #666666;
+    border: 1px solid black;
+    display: grid;
+    place-content: center;
+    margin: 2rem;
+    color: white;
 }
