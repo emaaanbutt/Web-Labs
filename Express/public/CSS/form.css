@@ -1,4 +1,4 @@
-#login-page{
+.page{
 
     position: relative;
     height: 100vh;
@@ -38,6 +38,10 @@
     transition: 0.3s ease;
 }
 
+#btns a{
+    text-decoration: none;
+}
+
 .butn:hover{
     cursor: pointer;
     background-color: black;
@@ -55,3 +59,10 @@ input{
 label{
     font-size: 1.5rem;
 }
+
+.form p{
+    position: absolute;
+    top: 5rem;
+    font-size: 1.2rem;
+}
+
