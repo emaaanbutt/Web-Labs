@@ -32,9 +32,9 @@ app.get("/register", (req, res)=>{
     res.render("register");
 });
 
-app.get("/cv", (req,res)=> {
-    res.render("cv", {layout: false});
-});
+// app.get("/cv", (req,res)=> {
+//     res.render("cv", {layout: false});
+// });
 
 app.listen(port, ()=>{
     console.log(`Server listening at port ${port}.`);
