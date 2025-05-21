@@ -1,11 +1,18 @@
 import express from "express";
 import expressLayouts from 'express-ejs-layouts';
 import mongoose from 'mongoose';
-import Product from "./models/women.model.js";
+import productSchema from "./models/images.model.js";
 
 const port = 4000;
 const app = express();
-const mongoURI = "mongodb://localhost:27017/women-db";
+const mongoURI_women = "mongodb://localhost:27017/women-db";
+const mongoURI_men = "mongodb://localhost:27017/men-db";
+
+const womenConnection =  mongoose.createConnection(mongoURI_women);
+const menConnection = mongoose.createConnection(mongoURI_men);
+
+const WomenProduct = womenConnection.model("Product", productSchema);
+const MenProduct =  menConnection.model("Product", productSchema);
 
 
 app.use(express.static("public"));
@@ -21,12 +28,13 @@ app.get("/checkout", (req,res) => {
 });
 
 app.get("/women", async (req,res)=>{
-    let products = await Product.find();
+    let products = await WomenProduct.find();
     res.render("women", {products});
 });
 
-app.get("/men", (req,res)=>{
-    res.render("men");
+app.get("/men", async (req,res)=>{
+    let products = await MenProduct.find();
+    res.render("men", {products});
 });
 
 app.get("/login", (req, res)=>{
@@ -41,9 +49,11 @@ app.get("/register", (req, res)=>{
 //     res.render("cv", {layout: false});
 // });
 
-mongoose.connect(mongoURI)
-  .then(() => console.log("✅ Connected to local MongoDB"))
-  .catch(err => console.error("❌ MongoDB connection error:", err));
+// mongoose.connect(mongoURI_women)
+//   .then(() => console.log("✅ Connected to local MongoDB"))
+//   .catch(err => console.error("❌ MongoDB connection error:", err));
+
+
 
 
 app.listen(port, ()=>{
