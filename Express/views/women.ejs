@@ -17,12 +17,13 @@
 </div>
 
 <div class="container-div">
-    <% const images = ['/Images/w1.png', '/Images/w2.png', '/Images/w3.png', '/Images/w4.png', '/Images/w5.png', '/Images/w6.png',];
-    images.forEach(image => { %>
+    <% for( let index = 0; index < products.length; index++ ) { %>
         <div class="small-cont">
             <a href="">
-                <img src="<%= image %>" alt="">
+                <img src="<%= products[index].image %>" alt="">
             </a>
         </div>
-    <% }); %>
+    <% } %>
+    
 </div>
+
