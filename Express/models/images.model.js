@@ -1,7 +1,7 @@
-import mongoose, { model } from 'mongoose';
+import mongoose from 'mongoose';
 
-const productSchema = new mongoose.Schema({
+const imageSchema = new mongoose.Schema({
     image: String,
 });
 
-export default productSchema;
+export default imageSchema;

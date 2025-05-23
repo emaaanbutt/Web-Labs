@@ -13,21 +13,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* removed position: absolute and top */
 }
 
 .products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2rem; /* optional: adds space between items */
+    gap: 2rem; 
     padding: 2rem;
-    /* removed position: absolute and top */
 }
 
 .product-cont {
     display: flex;
     flex-direction: column;
-    width: calc(33.33% - 2rem); /* for 3 per row with some spacing */
+    width: calc(33.33% - 2rem);
     box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+.product-desc{
+    font-family:  'Arial Narrow', Arial, sans-serif;
+    padding-top: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.product-price{
+    color: rgb(156, 11, 11);
+    font-weight: 800;
 }

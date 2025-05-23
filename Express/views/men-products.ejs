@@ -4,83 +4,23 @@
     </div>
 
     <div class="products">
-        <a href="" class="product-cont">
+
+        <% for( let index = 0; index < products.length; index++ ) { %>
+
+            <a href="" class="product-cont">
             <div class="product-img">
-                <img src="/Images/mp1.png" alt="">
+                <img src="<%= products[index].image %>" alt="">
             </div>
             <div class="product-desc">
-                COLLISION ribbed vest in white
+                <%= products[index].description %>
             </div>
             <div class="product-price">
-                $13.42
+                <%= products[index].price %>
             </div>
         </a>
-        <a href="" class="product-cont">
-            <div class="product-img">
-                <img src="/Images/mp1.png" alt="">
-            </div>
-            <div class="product-desc">
-                COLLISION ribbed vest in white
-            </div>
-            <div class="product-price">
-                $13.42
-            </div>
-        </a>
-        <a href="" class="product-cont">
-            <div class="product-img">
-                <img src="/Images/mp1.png" alt="">
-            </div>
-            <div class="product-desc">
-                COLLISION ribbed vest in white
-            </div>
-            <div class="product-price">
-                $13.42
-            </div>
-        </a>
-        <a href="" class="product-cont">
-            <div class="product-img">
-                <img src="/Images/mp1.png" alt="">
-            </div>
-            <div class="product-desc">
-                COLLISION ribbed vest in white
-            </div>
-            <div class="product-price">
-                $13.42
-            </div>
-        </a>
-        <a href="" class="product-cont">
-            <div class="product-img">
-                <img src="/Images/mp1.png" alt="">
-            </div>
-            <div class="product-desc">
-                COLLISION ribbed vest in white
-            </div>
-            <div class="product-price">
-                $13.42
-            </div>
-        </a>
-        <a href="" class="product-cont">
-            <div class="product-img">
-                <img src="/Images/mp1.png" alt="">
-            </div>
-            <div class="product-desc">
-                COLLISION ribbed vest in white
-            </div>
-            <div class="product-price">
-                $13.42
-            </div>
-        </a>
-        <a href="" class="product-cont">
-            <div class="product-img">
-                <img src="/Images/mp1.png" alt="">
-            </div>
-            <div class="product-desc">
-                COLLISION ribbed vest in white
-            </div>
-            <div class="product-price">
-                $13.42
-            </div>
-        </a>
+        
+        <% } %>
+       
     </div>
 </div>
 
