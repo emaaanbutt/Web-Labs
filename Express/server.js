@@ -45,6 +45,14 @@ app.get("/register", (req, res)=>{
     res.render("register");
 });
 
+app.get("/admin", (req,res)=>{
+    res.render("admin", {layout:false});
+});
+
+app.get("/men-products", (req,res) => {
+    res.render("men-products");
+});
+
 // app.get("/cv", (req,res)=> {
 //     res.render("cv", {layout: false});
 // });
