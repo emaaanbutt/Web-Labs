@@ -24,7 +24,7 @@ app.use(expressLayouts);
 app.set("view engine", "ejs");
 
 app.get("/", (req,res)=>{
-    res.render("index");
+    res.render("index", { layout: 'layouts/layout1' });
 });
 
 app.get("/checkout", (req,res) => {
@@ -33,31 +33,35 @@ app.get("/checkout", (req,res) => {
 
 app.get("/women", async (req,res)=>{
     let products = await WomenImages.find();
-    res.render("women", {products});
+    res.render("women",{ layout: 'layouts/layout1', products});
 });
 
 app.get("/men", async (req,res)=>{
     let products = await MenImages.find();
-    res.render("men", {products});
+    res.render("men", {layout: 'layouts/layout1', products});
 });
 
 app.get("/men-products", async (req,res) => {
     let products = await MenProducts.find();
-    res.render("men-products", {products});
+    res.render("men-products", {layout: 'layouts/layout1', products});
 });
 
 
 app.get("/login", (req, res)=>{
-    res.render("login");
+    res.render("login", {layout: 'layouts/layout1'});
 });
 
 app.get("/register", (req, res)=>{
-    res.render("register");
+    res.render("register", {layout: 'layouts/layout1'});
 });
 
 app.get("/admin", (req,res)=>{
-    res.render("admin", {layout:false});
+    res.render("admin/men-products/add", {layout: false});
 });
+
+
+
+
 
 // app.get("/cv", (req,res)=> {
 //     res.render("cv", {layout: false});

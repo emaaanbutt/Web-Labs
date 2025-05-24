@@ -1,5 +1,6 @@
 html{
     overflow-x: hidden;
+    position: relative;
 }
 
 * {
@@ -21,6 +22,7 @@ h1{
     height: 5rem;
     width: 100%;
     border: 1px solid white;
+    background-color: black;
 }
 
 
@@ -47,3 +49,21 @@ h1{
     color: #666;
 }
 
+.control-panel{
+    width: 75%;
+    background-color: #948e8e;
+    height: 100vh;
+    position: absolute;
+    top: 0rem;
+    left: 25%;
+    color: black;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
