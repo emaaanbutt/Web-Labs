@@ -95,6 +95,7 @@ input{
 
 textarea{
     height: 100px;
-    padding-left: 15px;
+    padding: 15px;
     font-size: 1.2rem;
+
 }
