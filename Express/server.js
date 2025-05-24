@@ -18,7 +18,7 @@ const WomenImages = womenConnection.model("Product", imageSchema);
 const MenImages =  menConnection.model("Product", imageSchema);
 const MenProducts = menProdConnection.model("Product", productSchema);
 
-
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(expressLayouts);
 app.set("view engine", "ejs");
@@ -55,9 +55,23 @@ app.get("/register", (req, res)=>{
     res.render("register", {layout: 'layouts/layout1'});
 });
 
-app.get("/admin", (req,res)=>{
+app.get("/admin/men-products/add", (req,res)=>{
     res.render("admin/men-products/add", {layout: false});
 });
+
+app.post("/admin/men-products/add", async (req,res)=>{
+    let data = req.body;
+
+    let p = new MenProducts();
+    p.image =  data.image;
+    p.description = data.description;
+    p.price = data.price;
+
+    await p.save();
+    return res.redirect("/");
+});
+
+
 
 
 

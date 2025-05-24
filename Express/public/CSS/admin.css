@@ -67,3 +67,34 @@ a{
     text-decoration: none;
     color: white;
 }
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+    width: 50%;
+}
+
+h3{
+    font-size: 2rem;
+    padding: 20px;
+}
+
+label{
+    font-size: 1.5em;
+
+}
+
+input{
+    height: 3rem;
+    font-size: 1.2rem;
+    padding-left: 15px;
+}
+
+textarea{
+    height: 100px;
+    padding-left: 15px;
+    font-size: 1.2rem;
+}

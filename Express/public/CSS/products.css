@@ -32,6 +32,11 @@
     color: black;
 }
 
+.product-img img{
+    width: 350px;
+    height: 400px;
+}
+
 .product-desc{
     font-family:  'Arial Narrow', Arial, sans-serif;
     padding-top: 1rem;
