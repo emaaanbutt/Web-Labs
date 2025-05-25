@@ -57,13 +57,6 @@ app.get("/register", (req, res)=>{
     res.render("register", {layout: 'layouts/layout1'});
 });
 
-
-
-
-
-
-
-
 // app.get("/cv", (req,res)=> {
 //     res.render("cv", {layout: false});
 // });
