@@ -8,8 +8,9 @@ const MenProducts = menProdConnection.model("Product", productSchema);
 
 let controller = express.Router();
 
-controller.get("/admin/men-products/add", (req,res)=>{
-    res.render("admin/men-products/add", {layout: false});
+controller.get("/admin/men-products/add",async (req,res)=>{
+    let products = await MenProducts.find();
+    res.render("admin/men-products/add", {layout: false, products});
 });
 
 controller.post("/admin/men-products/add", async (req,res)=>{

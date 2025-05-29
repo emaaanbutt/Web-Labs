@@ -102,4 +102,34 @@ textarea{
 
 #display{
     color: white;
+    margin-bottom: 5rem;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.btn{
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    color: white;
+}
+
+.edit-btn{
+    background-color: green;
+}
+
+.del-btn{
+    background-color: red;
+}
+
+.btn:hover{
+    cursor: pointer;
 }
