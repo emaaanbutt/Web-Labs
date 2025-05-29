@@ -22,6 +22,7 @@ controller.post("/admin/men-products/add", async (req,res)=>{
     p.price = data.price;
 
     await p.save();
+    res.redirect("/admin/men-products/add");
 });
 
 controller.delete('/admin/men-products/:id', async (req, res) => {
@@ -32,6 +33,13 @@ controller.delete('/admin/men-products/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: 'Failed to delete product' });
   }
+});
+
+controller.put('/admin/men-products/', async(req,res)=>{
+    let newProd = new MenProducts(req.body);
+    await newProd.save();
+    res.send(newProd);
+    
 });
 
 export default controller;
