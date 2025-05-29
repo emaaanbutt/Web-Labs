@@ -33,7 +33,7 @@
   <h3 id="display">Men Products</h3>
   <div class="products">
     <% for( let index = 0; index < products.length; index++ ) { %>
-    <div class="product-cont">
+    <div class="product-cont" data-id="<%= products[index]._id %>">
       <div class="product-img">
         <img src="<%= products[index].image %>" alt="" />
       </div>
