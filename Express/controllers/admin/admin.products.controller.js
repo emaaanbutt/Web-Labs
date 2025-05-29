@@ -21,7 +21,7 @@ controller.post("/admin/men-products/add", async (req,res)=>{
     p.price = data.price;
 
     await p.save();
-    return res.redirect("/");
+    // return res.redirect("/");
 });
 
 export default controller;

@@ -1,7 +1,18 @@
 <link rel="stylesheet" href="/CSS/admin.css" />
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="/script/admin.js"></script>
+
+<div id="side-bar">
+  <h1>Admin Panel</h1>
+
+  <ul class="options">
+    <li id="add-btn"><a href="#add-prod">Add product</a></li>
+    <li id="view-btn"><a href="#display-products">View products</a></li>
+  </ul>
+</div>
 
 <div class="control-panel" id="add-page">
-  <h3>Add New Product</h3>
+  <h3 id="add-prod">Add New Product</h3>
   <form action="" method="post">
     <label for="image">Image path: </label>
     <input type="text" name="image" value="" />
@@ -11,4 +22,8 @@
     <input type="number" name="price" value=""  step="any"/> 
     <input type="submit" />
   </form>
+</div>
+
+<div id="display-products">
+  <h3 id="display">Men Products</h3>
 </div>
