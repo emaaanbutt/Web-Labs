@@ -51,13 +51,6 @@ controller.put('/admin/men-products/:id', async (req, res) => {
   }
 });
 
-// controller.put('/admin/men-products/', async(req,res)=>{
-//     let newProd = new MenProducts(req.body);
-//     await newProd.save();
-//     res.send(newProd);
-    
-// });
-
 export default controller;
 
 
