@@ -35,12 +35,28 @@ controller.delete('/admin/men-products/:id', async (req, res) => {
   }
 });
 
-controller.put('/admin/men-products/', async(req,res)=>{
-    let newProd = new MenProducts(req.body);
-    await newProd.save();
-    res.send(newProd);
-    
+controller.put('/admin/men-products/:id', async (req, res) => {
+  try {
+    const updatedProduct = await MenProducts.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    if (!updatedProduct) {
+      return res.status(404).send({ success: false, message: "Product not found" });
+    }
+    res.send({ success: true, data: updatedProduct });
+  } catch (err) {
+    res.status(500).send({ success: false, message: "Error updating product" });
+  }
 });
+
+// controller.put('/admin/men-products/', async(req,res)=>{
+//     let newProd = new MenProducts(req.body);
+//     await newProd.save();
+//     res.send(newProd);
+    
+// });
 
 export default controller;
 
