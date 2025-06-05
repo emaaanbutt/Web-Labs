@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import productSchema  from "../../models/products.model.js";
+import MenProducts from "../../models/products.model";
 
 const mongoURI_men_prod = "mongodb://localhost:27017/men-products";
 const menProdConnection = mongoose.createConnection(mongoURI_men_prod);
