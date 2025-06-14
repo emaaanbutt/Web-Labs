@@ -17,16 +17,21 @@
 </div>
 
 <div class="control-panel" id="add-page">
-  <h3 id="add-prod">Add New Product</h3>
+  <h3 id="form-heading">Add New Product</h3>
   <form action="" method="post">
-    <label for="image">Image path: </label>
-    <input type="text" name="image" value="" />
-    <label for="description" class="title">Description: </label>
-    <textarea name="description" draggable="false"></textarea>
-    <label for="price" class="title">Price: </label>
-    <input type="number" name="price" value="" step="any" />
-    <input type="submit" />
-  </form>
+  <input type="hidden" name="productID" value="" />
+  
+  <label for="image">Image path: </label>
+  <input type="text" name="image" value="" />
+
+  <label for="description" class="title">Description: </label>
+  <textarea name="description" draggable="false"></textarea>
+
+  <label for="price" class="title">Price: </label>
+  <input type="number" name="price" value="" step="any" />
+
+  <input type="submit" value="Save" />
+</form>
 </div>
 
 <div id="display-products">

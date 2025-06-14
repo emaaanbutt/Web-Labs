@@ -1,16 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 .page{
 
     position: relative;
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #666666;
+    /* background-color: #666666; */
     position: relative;
+    background-image: url('/Images/pattern.jpg');
+    
+    
 }
 
 .form{
+    margin-left: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +36,7 @@
 
 .butn{
     width: 5rem;
-    height: 2rem;
+    height: 1rem;
     background-color: #666666;
     border: 1px solid black;
     display: grid;
@@ -36,6 +45,7 @@
     color: white;
     padding: 1rem;
     transition: 0.3s ease;
+    font-size: 1.2rem;
 }
 
 #btns a{
@@ -50,6 +60,9 @@
 
 input{
     width: 20rem;
+    height: 2rem;
+    padding-left: 1rem;
+    font-size: 1.2rem;
 }
 
 .active{
@@ -57,12 +70,15 @@ input{
 }
 
 label{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
-.form p{
-    position: absolute;
-    top: 5rem;
-    font-size: 1.2rem;
+.link{
+    color: blue;
+}
+
+#invalid, #exists{
+    display: none;
+    color: red;
 }
 

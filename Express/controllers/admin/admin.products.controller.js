@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
-import MenProducts from "../../models/products.model";
+import productSchema from "../../models/products.model.js";
+import { isAdmin, isAuth } from "../../middleware/auth.middleware.js";
 
 const mongoURI_men_prod = "mongodb://localhost:27017/men-products";
 const menProdConnection = mongoose.createConnection(mongoURI_men_prod);
@@ -8,12 +9,12 @@ const MenProducts = menProdConnection.model("Product", productSchema);
 
 let controller = express.Router();
 
-controller.get("/admin/men-products/add",async (req,res)=>{
+controller.get("/admin/men-products/add", isAuth, isAdmin, async (req,res)=>{
     let products = await MenProducts.find();
     res.render("admin/men-products/add", {layout: false, products});
 });
 
-controller.post("/admin/men-products/add", async (req,res)=>{
+controller.post("/admin/men-products/", async (req,res)=>{
     let data = req.body;
 
     let p = new MenProducts();

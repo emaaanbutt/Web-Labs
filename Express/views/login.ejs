@@ -1,29 +1,43 @@
-<div class="page">
-    <form class="form" action="">
-        <p>Hi friend! Enter your email to login.</p>
-        <div id="btns">
-            <a href="">
-                <div class="butn active" id="login">
-                    Login
-                </div>
-            </a>
-            <a href="/register">
-                <div class="butn" id="register">
-                    Register
-                </div>
-            </a>
-        
-    </div>
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
-    <label for="email">Email:</label>
-    <input type="text" name="email" id="email">
-    <label for="password">Password</label>
-    <input type="password" id="password">
+<link rel="stylesheet" href="/CSS/form.css" />
 
-    <div class="butn" id="submit">
-        Submit
+<div class="page">
+  <form class="form" action="/login" method="POST">
+    <div id="btns">
+      <a href="">
+        <div class="butn active" id="login">Login</div>
+      </a>
+      <a href="/register">
+        <div class="butn" id="register">Register</div>
+      </a>
     </div>
-    </form>
-    
+    <label for="email">Email:</label>
+    <input
+      type="text"
+      name="email"
+      id="email"
+      required
+      placeholder="Enter your email"
+    />
+    <label for="password">Password</label>
+    <input
+      type="password"
+      name="password"
+      required
+      placeholder="Enter your password"
+    />
+    <% if (error) { %>
+    <span id="invalid" style="display: block"><%= error %></span>
+    <% } else { %>
+    <span id="invalid" style="display: none"></span>
+    <% } %>
+
+    <a class="link" href="">Forgot password?</a>
+
+    <button class="butn" id="submit" type="submit">Login</button>
+
+    <span
+      >Don't have an account?
+      <a class="link" href="/register">Register</a></span
+    >
+  </form>
 </div>

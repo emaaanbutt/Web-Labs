@@ -1,6 +1,7 @@
+<link rel="stylesheet" href="/CSS/form.css">
+
 <div class="page">
-    <form class="form" action="">
-        <p>Hi friend! Enter your email to register.</p>
+    <form class="form" action="/register" method="POST">
         <div id="btns">
             <a href="/login">
                 <div class="butn" id="login">
@@ -13,14 +14,24 @@
                 </div>
             </a>
     </div>
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required placeholder="Enter your name">
     <label for="email">Email:</label>
-    <input type="text" name="email" id="email-register">
+    <input type="text" name="email" id="email-register" required placeholder="Enter your email">
     <label for="password">Password</label>
-    <input type="password" id="password-register">
+    <input type="password" name="password" required placeholder="Choose a password">
 
-    <div class="butn" id="submit">
-        Submit
-    </div>
+     <% if (exists) { %>
+    <span id="exists" style="display: block"><%= exists %></span>
+    <% } else { %>
+    <span id="exists" style="display: none"></span>
+    <% } %>
+
+    <button class="butn" id="submit" type="submit">Register</button>
+
+
+    <span>Already have an account? <a class="link" href="/login">Login</a></span>
+
     </form>
     
 </div>
