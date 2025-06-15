@@ -35,6 +35,16 @@ body {
     font-family:'Futura-pt', sans-serif;
 }
 
+.user-info{
+    position: absolute;
+    top: 0rem;
+    display: flex;
+    width: 100%;
+}
+
+.user-info a{
+    justify-self:flex-end;
+}
 
 #top-section{
     position: relative;

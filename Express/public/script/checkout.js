@@ -165,66 +165,6 @@ function validateDate(idName,divIdName) {
     }
 }
 
-document.getElementById("firstName").addEventListener("input", function () {
-    document.querySelector("#first-name-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("lastName").addEventListener("input", function () {
-    document.querySelector("#last-name-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("username").addEventListener("input", function () {
-    document.querySelector("#username-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("email").addEventListener("input", function () {
-    document.querySelector("#email-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("address").addEventListener("input", function () {
-    document.querySelector("#address-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("country").addEventListener("input", function () {
-    document.querySelector("#country-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("state").addEventListener("input", function () {
-    document.querySelector("#state-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("zip").addEventListener("input", function () {
-    document.querySelector("#zip-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("cc-name").addEventListener("input", function () {
-    document.querySelector("#cc-name-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("cc-number").addEventListener("input", function () {
-    document.querySelector("#cc-number-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("cc-cvv").addEventListener("input", function () {
-    document.querySelector("#cvv-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
-document.getElementById("cc-expiration").addEventListener("input", function () {
-    document.querySelector("#date-div .invalid-feedback").classList.remove("display");
-    this.classList.remove("success");
-});
-
 
 function isValidName(name) {
     name = name.trim();
@@ -314,4 +254,139 @@ document.getElementById("country").addEventListener("change", function () {
 });
 
 loadCountries();
+
+async function submitForm(event) {
+  event.preventDefault();
+
+  if (!allRequiredFieldsValid()) {
+    alert("Please fill all required fields correctly before submitting.");
+    return;
+  }
+
+  const form = event.target;
+
+  const userDetails = {
+    firstName: document.getElementById('firstName').value,
+    lastName: document.getElementById('lastName').value,
+    username: document.getElementById('username').value,
+    email: document.getElementById('email').value,
+    address: document.getElementById('address').value,
+    country: document.getElementById('country').value,
+    state: document.getElementById('state').value,
+    zip: document.getElementById('zip').value,
+    paymentMethod: document.querySelector('input[name="paymentMethod"]:checked').id
+  };
+
+  try {
+    const response = await fetch('/checkout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(userDetails)
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert('Order placed successfully!');
+      window.location.href = '/'; 
+    } else {
+      alert(data.message || 'Something went wrong.');
+    }
+  } catch (err) {
+    console.error('Checkout failed:', err);
+    alert('Checkout failed. Please try again.');
+  }
+}
+
+document.getElementById("checkoutForm").addEventListener("submit", submitForm);
+
+
+function allRequiredFieldsValid() {
+  const requiredFields = [
+    'firstName', 'lastName', 'username', 'address',
+    'country', 'state', 'zip', 'cc-name', 'cc-number', 'cc-expiration', 'cc-cvv'
+  ];
+  
+  let allValid = true;
+
+  for (const id of requiredFields) {
+    const input = document.getElementById(id);
+    if (!input || input.value.trim() === "") {
+      input.classList.remove("success");
+      input.classList.add("is-invalid");
+      allValid = false;
+    }
+  }
+
+  return allValid;
+}
+
+const requiredFields = [
+  'firstName', 'lastName', 'username', 'address',
+  'country', 'state', 'zip', 'cc-name', 'cc-number', 'cc-expiration', 'cc-cvv'
+];
+
+requiredFields.forEach(id => {
+  const input = document.getElementById(id);
+  if (input) {
+    input.addEventListener('input', () => {
+      if (input.value.trim() !== "") {
+        input.classList.remove("is-invalid");
+        input.classList.add("success");
+      } else {
+        input.classList.remove("success");
+        input.classList.add("is-invalid");
+      }
+    });
+  }
+});
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const updateTotal = () => {
+      let total = 0;
+      document.querySelectorAll("tbody tr").forEach(row => {
+        const price = parseFloat(row.querySelector("td:nth-child(2)").textContent.replace("$", ""));
+        const quantity = parseInt(row.querySelector(".qty").textContent);
+        total += price * quantity;
+      });
+      document.getElementById("cart-total").textContent = total.toFixed(2);
+    };
+
+    // Increase quantity
+    document.querySelectorAll(".increase-qty").forEach(button => {
+      button.addEventListener("click", (e) => {
+        const row = e.target.closest("tr");
+        const qtySpan = row.querySelector(".qty");
+        let quantity = parseInt(qtySpan.textContent);
+        qtySpan.textContent = ++quantity;
+        updateTotal();
+      });
+    });
+
+    // Decrease quantity (but not less than 1)
+    document.querySelectorAll(".decrease-qty").forEach(button => {
+      button.addEventListener("click", (e) => {
+        const row = e.target.closest("tr");
+        const qtySpan = row.querySelector(".qty");
+        let quantity = parseInt(qtySpan.textContent);
+        if (quantity > 1) {
+          qtySpan.textContent = --quantity;
+          updateTotal();
+        }
+      });
+    });
+
+    // Remove item
+    document.querySelectorAll(".remove-item").forEach(button => {
+      button.addEventListener("click", (e) => {
+        const row = e.target.closest("tr");
+        row.remove();
+        updateTotal();
+      });
+    });
+  });
+
 

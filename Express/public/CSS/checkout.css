@@ -33,3 +33,26 @@ body {
     position: relative;
 }
 
+.quantity{
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 5px;
+}
+
+.decrease-qty, .increase-qty{
+    width: 80%;
+    height: 50%;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+.decrease-qty:hover, .increase-qty:hover{
+    color: black;
+    background-color: white;
+}
+
+.remove-item:hover{
+    background-color: white;
+}

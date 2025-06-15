@@ -31,6 +31,7 @@
     box-sizing: border-box;
     text-decoration: none;
     color: black;
+    position: relative;
 }
 
 .product-img img{
@@ -48,4 +49,22 @@
 .product-price{
     color: rgb(156, 11, 11);
     font-weight: 800;
+}
+
+.add-to-cart-btn{
+    bottom: 0rem;
+    position: absolute;
+    right: 0rem;
+    padding: 3px;
+    background-color: black;
+    color: white;
+    transition: 0.3s ease-in;
+    border: 1px solid black
+}
+
+.add-to-cart-btn:hover{
+    background-color: yellow;
+    color: black;
+
+
 }

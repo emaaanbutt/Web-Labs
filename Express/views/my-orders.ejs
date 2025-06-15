@@ -1,0 +1,19 @@
+<h1>My Orders</h1>
+
+<% if (orders.length === 0) { %>
+  <p>You haven't placed any orders yet.</p>
+<% } else { %>
+  <% orders.forEach(order => { %>
+    <div class="order-card">
+      <p><strong>Order Date:</strong> <%= new Date(order.createdAt).toLocaleString() %></p>
+      <p><strong>Status:</strong> <%= order.status %></p>
+      <p><strong>Total:</strong> $<%= order.total.toFixed(2) %></p>
+
+      <ul>
+        <% order.items.forEach(item => { %>
+          <li><%= item.description %> — $<%= item.price.toFixed(2) %> × <%= item.quantity %></li>
+        <% }) %>
+      </ul>
+    </div>
+  <% }) %>
+<% } %>

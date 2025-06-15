@@ -2,6 +2,7 @@ import express from "express";
 import expressLayouts from 'express-ejs-layouts';
 import mongoose from 'mongoose';
 
+import cartRoutes from './routes/cart.routes.js';
 import imageSchema from "./models/images.model.js";
 import productSchema  from "./models/products.model.js";
 
@@ -30,11 +31,10 @@ const MenProducts = menProdConnection.model("Product", productSchema);
 
 // app.use(bodyParser.json());
 
-// var config = require("config");
+
 app.use(express.static("public"));
 app.use(expressLayouts);
 app.set("view engine", "ejs");
-// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
@@ -46,16 +46,35 @@ app.use(
   })
 );
 
+app.use((req, res, next) => {
+  res.locals.user = req.session.user || null;
+  next();
+});
+
 app.use("/", adminProductsController);
 app.use("/", authRoutes);
-// app.use("/", sessionAuth, indexRouter);
+app.use('/', cartRoutes);
 
 app.get("/", (req,res)=>{
     res.render("index");
 });
 
-app.get("/checkout", (req,res) => {
-    res.render("checkout",  {layout: false});
+// app.get("/checkout", (req,res) => {
+//     res.render("checkout",  {layout: false});
+// });
+
+app.get("/checkout", (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).send("Unauthorized");
+  }
+
+  const cart = req.session.cart || [];
+
+  res.render("checkout", {
+    cart,
+    user: req.session.user,
+    layout: false
+  });
 });
 
 app.get("/women", async (req,res)=>{

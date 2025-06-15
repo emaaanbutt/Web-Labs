@@ -45,14 +45,9 @@ export const getLogin = (req, res) => {
 
 export const postLogin = async (req, res) => {
   const { email, password } = req.body;
-  console.log("Trying to login:");
-  console.log("Email:", email);
-  console.log("Password:", password);
 
   const user = await User.findOne({ email: email.toLowerCase() });
-   console.log("User found in DB:", user);
   const valid = user && (await bcrypt.compare(password, user.password));
-    console.log("Password match result:", valid);
 
   if (!valid) {
     return res.render("login", {
@@ -67,8 +62,6 @@ export const postLogin = async (req, res) => {
     email: user.email,
     role: user.role,
   };
-
-    console.log("Session user set:", req.session.user);
 
   if (user.role === "admin") {
     res.redirect("/admin/men-products/add");

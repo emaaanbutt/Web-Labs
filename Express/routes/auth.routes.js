@@ -4,15 +4,18 @@ import {
   postRegister,
   getLogin,
   postLogin,
-  logout,
 } from "../controllers/auth.controller.js";
-
-import { isAuth, isAdmin } from "../middleware/auth.middleware.js";
-
 
 const router = express.Router();
 
-
+router.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).send('Logout failed');
+    }
+    res.redirect('/login');
+  });
+});
 
 
 router.get("/register", getRegister);
@@ -20,7 +23,5 @@ router.post("/register", postRegister);
 
 router.get("/login", getLogin);
 router.post("/login", postLogin);
-
-router.get("/logout", logout);
 
 export default router;

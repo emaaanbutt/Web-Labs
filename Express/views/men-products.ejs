@@ -1,27 +1,26 @@
 <div class="product-page">
-    <div class="discount">
-        <h1>Up to 30% off!</h1>
+  <div class="discount">
+    <h1>Up to 30% off!</h1>
+  </div>
+
+  <div class="products">
+    <% for( let index = 0; index < products.length; index++ ) { %>
+
+    <div class="product-cont">
+      <div class="product-img">
+        <img src="<%= products[index].image %>" alt="" />
+      </div>
+      <div class="product-desc"><%= products[index].description %></div>
+      <div class="product-price">$<%= products[index].price %></div>
+
+      <button
+        class="add-to-cart-btn"
+        data-id="<%= products[index]._id %>"
+        data-price="<%= products[index].price %>"
+        data-description="<%= products[index].description %>">
+        Add to Cart
+      </button>
     </div>
-
-    <div class="products">
-
-        <% for( let index = 0; index < products.length; index++ ) { %>
-
-            <a href="" class="product-cont">
-            <div class="product-img">
-                <img src="<%= products[index].image %>" alt="">
-            </div>
-            <div class="product-desc">
-                <%= products[index].description %>
-            </div>
-            <div class="product-price">
-                $<%= products[index].price %>
-            </div>
-        </a>
-        
-        <% } %>
-    
-       
-    </div>
+    <% } %>
+  </div>
 </div>
-
