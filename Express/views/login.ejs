@@ -1,6 +1,12 @@
 <link rel="stylesheet" href="/CSS/form.css" />
 
 <div class="page">
+  <a class="back" href="/"> <div>Back</div></a>
+  <% if (query && query.alert == '1') { %>
+  <script>
+    alert("Please login to continue to checkout.");
+  </script>
+  <% } %>
   <form class="form" action="/login" method="POST">
     <div id="btns">
       <a href="">

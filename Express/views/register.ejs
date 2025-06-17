@@ -1,27 +1,41 @@
-<link rel="stylesheet" href="/CSS/form.css">
+<link rel="stylesheet" href="/CSS/form.css" />
 
 <div class="page">
-    <form class="form" action="/register" method="POST">
-        <div id="btns">
-            <a href="/login">
-                <div class="butn" id="login">
-                    Login
-                </div>
-            </a>
-            <a href="">
-                <div class="butn active" id="register">
-                    Register
-                </div>
-            </a>
+  <a class="back" href="/"> <div>Back</div></a>
+  <form class="form" action="/register" method="POST">
+    <div id="btns">
+      <a href="/login">
+        <div class="butn" id="login">Login</div>
+      </a>
+      <a href="">
+        <div class="butn active" id="register">Register</div>
+      </a>
     </div>
     <label for="name">Name:</label>
-    <input type="text" name="name" id="name" required placeholder="Enter your name">
+    <input
+      type="text"
+      name="name"
+      id="name"
+      required
+      placeholder="Enter your name"
+    />
     <label for="email">Email:</label>
-    <input type="text" name="email" id="email-register" required placeholder="Enter your email">
+    <input
+      type="text"
+      name="email"
+      id="email-register"
+      required
+      placeholder="Enter your email"
+    />
     <label for="password">Password</label>
-    <input type="password" name="password" required placeholder="Choose a password">
+    <input
+      type="password"
+      name="password"
+      required
+      placeholder="Choose a password"
+    />
 
-     <% if (exists) { %>
+    <% if (exists) { %>
     <span id="exists" style="display: block"><%= exists %></span>
     <% } else { %>
     <span id="exists" style="display: none"></span>
@@ -29,9 +43,8 @@
 
     <button class="butn" id="submit" type="submit">Register</button>
 
-
-    <span>Already have an account? <a class="link" href="/login">Login</a></span>
-
-    </form>
-    
+    <span
+      >Already have an account? <a class="link" href="/login">Login</a></span
+    >
+  </form>
 </div>

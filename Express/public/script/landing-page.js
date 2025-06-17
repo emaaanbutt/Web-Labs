@@ -24,3 +24,7 @@ document.querySelectorAll(".add-to-cart-btn").forEach((btn) => {
     }
   });
 });
+
+$("#asos-logo").on("click", function () {
+  window.location.href = "/";
+});

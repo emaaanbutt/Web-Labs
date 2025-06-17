@@ -4,6 +4,29 @@ html, body {
     height: 100%;
 }
 
+.back{
+    width: 5rem;
+    height: 3rem;
+    background-color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 0.3s ease in;
+    align-self: flex-start;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    text-decoration: none;
+
+}
+
+
+.back:hover{
+    background-color: #666666;
+    cursor: pointer;
+}
+
 .page{
 
     position: relative;

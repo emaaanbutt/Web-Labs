@@ -21,7 +21,13 @@ router.get('/logout', (req, res) => {
 router.get("/register", getRegister);
 router.post("/register", postRegister);
 
-router.get("/login", getLogin);
+router.get("/login", (req, res) => {
+  res.render("login", {
+    layout: false,
+    error: null,
+    query: req.query //
+  });
+});
 router.post("/login", postLogin);
 
 export default router;
