@@ -28,10 +28,6 @@ const WomenImages = womenConnection.model("Product", imageSchema);
 const MenImages =  menConnection.model("Product", imageSchema);
 const MenProducts = menProdConnection.model("Product", productSchema);
 
-
-// app.use(bodyParser.json());
-
-
 app.use(express.static("public"));
 app.use(expressLayouts);
 app.set("view engine", "ejs");
@@ -59,24 +55,6 @@ app.get("/", (req,res)=>{
     res.render("index");
 });
 
-// app.get("/checkout", (req,res) => {
-//     res.render("checkout",  {layout: false});
-// });
-
-app.get("/checkout", (req, res) => {
-  if (!req.session.user) {
-    return res.status(401).send("Unauthorized");
-  }
-
-  const cart = req.session.cart || [];
-
-  res.render("checkout", {
-    cart,
-    user: req.session.user,
-    layout: false
-  });
-});
-
 app.get("/women", async (req,res)=>{
     let products = await WomenImages.find();
     res.render("women",{products});
@@ -91,23 +69,6 @@ app.get("/men-products", async (req,res) => {
     let products = await MenProducts.find();
     res.render("men-products", {products});
 });
-
-// app.get("/login", (req, res)=>{
-//     res.render("login", {layout: false});
-// });
-
-// app.get("/register", (req, res)=>{
-//     res.render("register", {layout: false});
-// });
-
-// app.get('/logout', (req, res) => {
-//   req.session.destroy(err => {
-//     if (err) {
-//       return res.send('Error logging out');
-//     }
-//     res.redirect('/login');
-//   });
-// });
 
 mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log("Connected to MongoDB");

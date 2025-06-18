@@ -11,7 +11,7 @@ export const renderMyOrdersPage = async (req, res) => {
     const orders = await Order.find({ "user.id": userId }).sort({ createdAt: -1 });
 
     res.render("my-orders", {
-      layout: "layout", // or false if no layout
+      layout: "layout", 
       orders,
     });
   } catch (error) {

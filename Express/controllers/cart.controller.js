@@ -1,39 +1,5 @@
 import Order from "../models/orders.model.js";
 
-// export const submitOrder = async (req, res) => {
-//   try {
-//     const userId = req.session.user?._id;
-//     const cart = req.session.cart || [];
-
-//     if (!userId) {
-//       return res.status(401).json({ success: false, message: "Not logged in" });
-//     }
-
-//     if (cart.length === 0) {
-//       return res.status(400).json({ success: false, message: "Cart is empty" });
-//     }
-
-//     const total = cart.reduce((sum, item) => sum + item.price, 0);
-
-//     const order = new Order({
-//       user: userId,
-//       items: cart,
-//       total,
-//       userDetails: req.body,
-//     });
-
-//     await order.save();
-//     req.session.cart = [];
-
-//     return res.status(200).json({ success: true });
-//   } catch (error) {
-//     console.error("Checkout error:", error);
-//     return res
-//       .status(500)
-//       .json({ success: false, message: "Internal server error" });
-//   }
-// };
-
 export const submitOrder = async (req, res) => {
   const cart = req.session.cart || [];
   const user = req.session.user;
@@ -121,3 +87,5 @@ export const renderCheckoutPage = (req, res) => {
     total,
   });
 };
+
+

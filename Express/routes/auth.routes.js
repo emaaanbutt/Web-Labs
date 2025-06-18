@@ -2,7 +2,6 @@ import express from "express";
 import {
   getRegister,
   postRegister,
-  getLogin,
   postLogin,
 } from "../controllers/auth.controller.js";
 
