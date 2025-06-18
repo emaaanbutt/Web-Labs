@@ -1,0 +1,65 @@
+
+#complaints-page {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #f8f9fa; /* light gray */
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  color: #222;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#complaints-page h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #111;
+  font-size: 26px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+#complaints-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+#complaints-page li {
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  background-color: #e9ecef; /* grayish background */
+  border-left: 5px solid #6c757d; /* dark gray stripe */
+  border-radius: 8px;
+}
+
+#complaints-page .order-id {
+  font-weight: bold;
+  color: #333;
+}
+
+#complaints-page .message {
+  margin: 8px 0;
+  font-style: italic;
+  color: #444;
+}
+
+#complaints-page .timestamp {
+  font-size: 12px;
+  color: #777;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #212529;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease-in-out;
+}
+
+.back-btn:hover {
+  background-color: #000;
+}

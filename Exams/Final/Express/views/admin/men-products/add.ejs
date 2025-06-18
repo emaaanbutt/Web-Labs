@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/CSS/admin.css" />
+<link rel="stylesheet" href="/CSS/products.css" />
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"
+></script>
+<script src="/script/admin.js"></script>
+
+<div id="side-bar">
+  <h1>Admin Panel</h1>
+
+  <ul class="options">
+    <li id="add-btn"><a href="#add-prod">Add product</a></li>
+    <li id="view-btn"><a href="#display-products">View products</a></li>
+  </ul>
+</div>
+
+<div class="control-panel" id="add-page">
+  <h3 id="form-heading">Add New Product</h3>
+  <form action="" method="post">
+  <input type="hidden" name="productID" value="" />
+  
+  <label for="image">Image path: </label>
+  <input type="text" name="image" value="" />
+
+  <label for="description" class="title">Description: </label>
+  <textarea name="description" draggable="false"></textarea>
+
+  <label for="price" class="title">Price: </label>
+  <input type="number" name="price" value="" step="any" />
+
+  <input type="submit" value="Save" />
+</form>
+</div>
+
+<div id="display-products">
+  <h3 id="display">Men Products</h3>
+  <div class="products">
+    <% for( let index = 0; index < products.length; index++ ) { %>
+    <div class="product-cont" data-id="<%= products[index]._id %>">
+      <div class="product-img">
+        <img src="<%= products[index].image %>" alt="" />
+      </div>
+      <div class="product-desc"><%= products[index].description %></div>
+      <div class="product-price">$<%= products[index].price %></div>
+      <div class="btns">
+        <div class="edit-btn btn">Edit</div>
+        <div class="del-btn btn">Delete</div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>

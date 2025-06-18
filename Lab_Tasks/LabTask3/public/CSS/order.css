@@ -1,0 +1,16 @@
+.order-card {
+  border: 1px solid #333;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #111;
+  color: #eee;
+}
+
+.order-card ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+.order-card p {
+  margin: 0.4rem 0;
+}

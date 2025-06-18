@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss Selfridge Clothing, Shoes & Accessories | ASOS </title>
+
+    <link rel="stylesheet" href="/CSS/Styles.css">
+    <link rel="stylesheet" href="/Responsivness/index_responsiveness.css">
+    <link rel="stylesheet" href="/CSS/women-men.css">
+    <link rel="stylesheet" href="/CSS/form.css">
+    <link rel="stylesheet" href="/CSS/products.css">
+    <link rel="stylesheet" href="/CSS/order.css">
+    <link rel="stylesheet" href="/CSS/contact.css">
+    <link rel="stylesheet" href="/CSS/complaint.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <link rel="website icon" type="png" href="/Images/Icons/logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="main-page">
+        <div id="top-section">
+            <div id="help">
+                <a href="">Help & FAQs</a>
+            </div>
+            <% if (user) { %>
+                <div class="user-info">
+                    <p>Welcome, <%= user.name %>!</p>
+                    <a href="/logout" class="btn btn-sm btn-outline-danger ms-2">Logout</a>
+                    <a href="/my-orders" class="btn btn-sm btn-outline-primary ms-2">My Orders</a>
+
+                    <% if (user.role==='admin' ) { %>
+                        <a href="/all-complaints" class="btn btn-sm btn-outline-dark ms-2">View All Complaints</a>
+                        <a href="/admin/men-products/add" class="btn btn-sm btn-outline-dark  ms-2">Admin Panel</a>
+                        <% } else { %>
+                            <a href="/contact" class="btn btn-sm btn-outline-primary ms-2">Contact Us</a>
+                            <a href="/my-complaints" class="btn btn-sm btn-outline-primary ms-2">My Complaints</a>
+                            <% } %>
+                </div>
+                <% } %>
+                    <div id="title-bar">
+                        <ul class="menu-bar">
+                            <li id="collapsed-side-menu">
+                                <nav class="navbar navbar-dark">
+                                    <div class="container-fluid">
+                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#navbarToggleExternalContent"
+                                            aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                                            aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                    </div>
+                                </nav>
+                            </li>
+                            <li id="shop">
+                                <img id="asos-logo" src="/Images/Icons/asos-logo.png" alt="asos logo">
+                            </li>
+                            <li>
+                                <a id="women" href="/women">
+                                    WOMEN
+                                </a>
+
+                            </li>
+                            <li>
+                                <a id="men" href="/men">
+                                    MEN
+                                </a>
+                                </h2>
+                            </li>
+                            <li>
+                                <div id="search-bar">
+                                    <input type="search" id="search-bar" class="form-control searchbar"
+                                        placeholder="Search for items and brands" aria-label="Search">
+                                </div>
+                            </li>
+                        </ul>
+                        <ul id="icon-container">
+                            <li id="hidden">
+                                <a href="">
+                                    <img id="search" class="icon" src="/Images/Icons/search.png" alt="search icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/login">
+                                    <img id="user" class="icon" src="/Images/Icons/user.png" alt="User icon">
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img id="heart" class="icon" src="/Images/Icons/heart.png"
+                                        alt="Heart or liked items">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/checkout">
+                                    <img id="bag" class="icon" src="/Images/Icons/shopping-bag.png" alt="shopping bag">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="top-menu">
+                        <ul id="top-menu-bar">
+                            <li>New in</li>
+                            <li>Clothing</li>
+                            <li>Trending</li>
+                            <li>Dresses</li>
+                            <li>Shoes</li>
+                            <li>Face + Body</li>
+                            <li>Accessories</li>
+                            <li>Wedding</li>
+                            <li>Brands</li>
+                            <li>Activewear</li>
+                            <li>Topshop</li>
+                        </ul>
+                    </div>
+
+                    <div id="discount-banner">
+                        <div class="banner-btn">
+                            <a href="">
+                                <h2>WOMEN</h2>
+                            </a>
+                        </div>
+                        <div id="discount-details">
+                            <p>UP TO 70% OFF 1000S OF STYLES <br> Plus, an extra 15% off* <br> With code: SUNSET</p>
+                        </div>
+                        <div class="banner-btn">
+                            <a href="/men-products">
+                                <h2>MEN</h2>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <%- body %>
+
+
+                        <div id="contact-page">
+                            <div id="socials">
+                                <ul id="socials-container">
+                                    <li>
+                                        <a id="fb-icon" href="">
+                                            <img class="icon size" src="/Images/Icons/facebook.png" alt="facebook logo">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="ig-icon" href="">
+                                            <img class="icon size" src="/Images/Icons/instagram.png"
+                                                alt="instagram logo">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="sc-icon" href="">
+                                            <img class="icon size" src="/Images/Icons/snapchat.png" alt="snapchat logo">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>|</span>
+                                    </li>
+                                    <li>
+                                        <img id="visa-icon" class="icon size" src="/Images/Icons/visa.png"
+                                            alt="visa card">
+                                    </li>
+                                    <li>
+                                        <img id="master-card-icon" class="icon size" src="/Images/Icons/card.png"
+                                            alt="master card">
+                                    </li>
+                                    <li>
+                                        <img id="american-express-icon" class="icon size"
+                                            src="/Images/Icons/american-express.png" alt="american express card">
+                                    </li>
+                                    <li>
+                                        <img id="paypal-icon" class="icon size" src="/Images/Icons/paypal.png"
+                                            alt="paypal card">
+                                    </li>
+                                    <li>
+                                        <img id="visa-electron-icon" class="icon size"
+                                            src="/Images/Icons/visa-electron.png" alt="visa electron card">
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div id="help-and-about-section">
+                                <div id="help-and-info">
+                                    <ul class="list" id="help-containter">
+                                        <h4 class="title">Help and information</h4>
+                                        <li>
+                                            <a href="">Help</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Track order</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Delivery & returns</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Sitemap</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="about">
+                                    <ul class="list" id="about-container">
+                                        <h4 class="title">About Asos</h4>
+                                        <li>
+                                            <a href="">About us</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Careers at ASOS</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Corporate responsibilty</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Investors' site</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="more-about">
+                                    <ul class="list" id="more-about-container">
+                                        <h4 class="title">More from Asos</h4>
+                                        <li>
+                                            <a href="">Mobile and ASOS apps</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Gift vouchers</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Black Friday</a>
+                                        </li>
+                                        <li>
+                                            <a href="">ASOS x Thrift+</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Discover the ASOS credit card</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="footer">
+                            <span>© 2025 ASOS. All Rights Reserved.</span>
+
+                            <ul id="privacy-and-conditions-container">
+                                <li>
+                                    <a href="">Privacy & Cookies</a>
+                                </li>
+                                <li>
+                                    |
+                                </li>
+                                <li>
+                                    <a href="">Ts&Cs</a>
+                                </li>
+                                <li>
+                                    |
+                                </li>
+                                <li>
+                                    <a href="">Accessibility</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <script src="/script/landing-page.js"></script>
+</body>
+
+</html>

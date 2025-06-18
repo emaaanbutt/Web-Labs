@@ -1,0 +1,45 @@
+.cover-img{
+    height: 80vh;
+    width: 100%;
+}
+
+#men-cover{
+    height: 100vh;
+}
+
+.c-img{
+    height: 100%;
+    width: 100%;
+}
+
+.collections a{
+    margin: 0;
+    height: 90vh;
+    width: 100%;
+
+}
+
+.collection{
+    margin-top: 5rem;
+}
+
+.heading{
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-div{
+    display: flex;
+    height: 45vh;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.small-cont a img{
+    height: 100%;
+    border: 1px solid white;
+}

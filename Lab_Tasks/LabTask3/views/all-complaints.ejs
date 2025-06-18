@@ -1,0 +1,20 @@
+<div id="complaints-page">
+  <h2>All User Complaints</h2>
+
+  <% if (complaints.length === 0) { %>
+    <p>No complaints have been submitted.</p>
+  <% } else { %>
+    <ul>
+      <% complaints.forEach(c => { %>
+        <li>
+          <strong>User:</strong> <%= c.userId?.name || 'Unknown' %> (<%= c.userId?.email %>)<br>
+          <strong>Order ID:</strong> <%= c.orderId %><br>
+          <strong>Message:</strong> <%= c.message %><br>
+          <small><%= c.createdAt.toLocaleString() %></small>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+
+  <a href="/" class="back-btn">← Back to Home</a>
+</div>

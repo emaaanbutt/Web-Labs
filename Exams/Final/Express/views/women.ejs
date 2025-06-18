@@ -1,0 +1,29 @@
+<div class="cover-img">
+    <a href="">
+        <img class="c-img" src="/Images/cover-women.png" alt="cover photo">
+    </a>
+</div>
+
+<div class="collections">
+    <a href="">
+        <div class="collection" >
+           <img src="./Images/collections-women.png" alt="">
+        </div>
+    </a>
+</div>
+
+<div class="heading">
+    <h2>New in</h2>
+</div>
+
+<div class="container-div">
+    <% for( let index = 0; index < products.length; index++ ) { %>
+        <div class="small-cont">
+            <a href="">
+                <img src="<%= products[index].image %>" alt="">
+            </a>
+        </div>
+    <% } %>
+    
+</div>
+
